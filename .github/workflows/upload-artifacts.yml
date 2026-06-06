@@ -16,10 +16,9 @@ jobs:
           mkdir dist
           echo "This is the build artifact" > dist/build.txt
       - name: Run tests
-        run: nmp test
+        run: npm test
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-assets
           path: dist
-          
